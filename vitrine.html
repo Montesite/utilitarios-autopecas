@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstração de Vitrine</title>
+  <meta name="description" content="Vitrine online da Utilitários Auto Peças — confira o catálogo completo de peças para vans, SUVs, VUCs e picapes.">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:        #121212;
+      --lime:        #E8E933;
+      --lime-dark:   #C7C71F;
+      --white:       #FFFFFF;
+    }
+
+    html, body {
+      height: 100%; width: 100%;
+      overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      height: 80px; width: 100%;
+      background: rgba(2,2,2,0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; width: 100%; max-width: 1200px; margin: 0 auto;
+      padding: 0 24px; gap: 16px;
+    }
+    .logo-link { display: flex; align-items: center; }
+    .logo-link img { height: 52px; width: auto; object-fit: contain; }
+
+    nav { display: flex; align-items: center; gap: 2px; }
+    nav a {
+      font-size: 0.875rem; font-weight: 500; color: rgba(255,255,255,0.85);
+      padding: 8px 13px; border-radius: 7px;
+      transition: color 0.2s, background 0.2s; white-space: nowrap;
+    }
+    nav a:hover { color: var(--lime); background: rgba(255,255,255,0.08); }
+
+    .btn-nav {
+      background: var(--lime); color: var(--dark) !important;
+      padding: 9px 20px; border-radius: 50px;
+      font-weight: 600; font-size: 0.875rem;
+      transition: background 0.2s;
+    }
+    .btn-nav:hover { background: var(--lime-dark); }
+    .btn-nav-vitrine {
+      background: transparent; color: var(--lime) !important;
+      border: 1.5px solid rgba(232,233,51,0.55);
+    }
+    .btn-nav-vitrine.nav-current { background: var(--lime); color: var(--dark) !important; }
+
+    .menu-toggle {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 6px; border: none; background: none;
+    }
+    .menu-toggle span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white); border-radius: 2px; transition: all 0.3s;
+    }
+
+    .mobile-nav {
+      display: none; position: fixed; top: 80px; left: 0; right: 0;
+      background: var(--white); padding: 16px 24px 24px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18); z-index: 999;
+    }
+    .mobile-nav.open { display: flex; flex-direction: column; gap: 4px; }
+    .mobile-nav a {
+      padding: 12px 16px; font-weight: 500; color: #181818;
+      border-radius: 8px; transition: background 0.2s, color 0.2s;
+    }
+    .mobile-nav a:hover { background: #F4F4F4; color: var(--dark); }
+    .mobile-nav .btn-nav {
+      margin-top: 8px; text-align: center;
+      background: var(--lime); color: var(--dark) !important;
+    }
+    .mobile-nav .btn-nav-vitrine {
+      background: transparent; color: var(--dark) !important; border: 1.5px solid var(--lime-dark);
+    }
+
+    @media (max-width: 1300px) {
+      nav { display: none; }
+      .menu-toggle { display: flex; }
+    }
+    @media (max-width: 480px) {
+      .logo-link img { height: 40px; }
+    }
+
+    /* ===== IFRAME ===== */
+    #vitrineFrame {
+      display: block;
+      width: 100%;
+      margin-top: 80px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-link" aria-label="Utilitários Auto Peças - Início">
+        <img src="logo.png" alt="Utilitários Auto Peças — Logo" fetchpriority="high">
+      </a>
+      <nav aria-label="Menu principal">
+        <a href="index.html#inicio">Início</a>
+        <a href="index.html#sobre">Sobre</a>
+        <a href="index.html#produtos">Produtos</a>
+        <a href="index.html#contato">Contato</a>
+        <a href="vitrine.html" class="btn-nav btn-nav-vitrine nav-current">Vitrine</a>
+        <a href="https://wa.me/5551997434030" class="btn-nav" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-nav" id="mobileNav" aria-label="Menu mobile">
+    <a href="index.html#inicio" class="mobile-link">Início</a>
+    <a href="index.html#sobre" class="mobile-link">Sobre</a>
+    <a href="index.html#produtos" class="mobile-link">Produtos</a>
+    <a href="index.html#contato" class="mobile-link">Contato</a>
+    <a href="vitrine.html" class="btn-nav btn-nav-vitrine mobile-link">Vitrine</a>
+    <a href="https://wa.me/5551997434030" class="btn-nav mobile-link" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+  </div>
+
+  <!-- VITRINE (IFRAME) -->
+  <iframe id="vitrineFrame" src="https://utilitarios.egestor.com.br/vitrine/" title="Vitrine online Utilitários Auto Peças"></iframe>
+
+  <script>
+    // Mobile menu
+    const toggle = document.getElementById('menuToggle');
+    const mNav   = document.getElementById('mobileNav');
+    const spans  = toggle.querySelectorAll('span');
+    toggle.addEventListener('click', () => {
+      const open = mNav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      if (open) {
+        spans[0].style.cssText = 'transform:rotate(45deg) translate(5px,5px)';
+        spans[1].style.cssText = 'opacity:0;transform:scaleX(0)';
+        spans[2].style.cssText = 'transform:rotate(-45deg) translate(5px,-5px)';
+      } else {
+        spans.forEach(s => s.style.cssText = '');
+      }
+    });
+    document.querySelectorAll('.mobile-link').forEach(l => {
+      l.addEventListener('click', () => {
+        mNav.classList.remove('open');
+        spans.forEach(s => s.style.cssText = '');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Ajusta a altura do iframe: 100vh - altura do header (80px)
+    const HEADER_HEIGHT = 80;
+    const frame = document.getElementById('vitrineFrame');
+    function resizeFrame() {
+      frame.style.height = (window.innerHeight - HEADER_HEIGHT) + 'px';
+    }
+    resizeFrame();
+    window.addEventListener('resize', resizeFrame);
+  </script>
+</body>
+</html>
