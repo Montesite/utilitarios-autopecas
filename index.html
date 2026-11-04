@@ -269,6 +269,10 @@
       color: rgba(255,255,255,0.82); margin-bottom: 36px; max-width: 580px;
     }
 
+    .hero-garantia {
+      font-size: clamp(0.85rem, 1.6vw, 1rem); font-weight: 800; color: var(--lime);
+      text-transform: uppercase; letter-spacing: 0.08em; margin: -18px 0 32px; max-width: 580px;
+    }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
 
     .btn-primary {
@@ -620,6 +624,17 @@
 
     /* ===== DEPOIMENTOS ===== */
     .depoimentos { background: var(--gray-50); }
+    .depo-cta { text-align: center; margin-top: 40px; }
+    .depo-cta > p { color: var(--text-light); margin-bottom: 16px; }
+    .avaliar-form { max-width: 520px; margin: 24px auto 0; text-align: left; background: var(--white); border: 1px solid var(--gray-200); border-radius: 16px; padding: 24px; }
+    .avaliar-form[hidden] { display: none; }
+    .avaliar-form .form-group { margin-bottom: 16px; }
+    .avaliar-form label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
+    .avaliar-form input, .avaliar-form textarea { width: 100%; padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 10px; font: inherit; }
+    .avaliar-form textarea { min-height: 100px; resize: vertical; }
+    .av-stars { display: flex; gap: 4px; }
+    .av-stars button { background: none; border: 0; font-size: 2rem; line-height: 1; color: var(--gray-200); cursor: pointer; padding: 0 2px; }
+    .av-stars button.on { color: var(--lime-dark); }
     .depo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
     .depo-card {
       position: relative; overflow: hidden;
@@ -743,6 +758,10 @@
     .footer-social a:hover svg { color: var(--dark); }
     .footer-social svg { width: 18px; height: 18px; color: var(--white); fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
+    .footer-pay { margin-top: 20px; }
+    .footer-pay-title { display: block; font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-bottom: 10px; }
+    .footer-pay-icons { display: flex; flex-wrap: wrap; gap: 8px; }
+    .footer-pay-icons svg { width: 46px; height: 29px; }
     .footer-col h4 {
       font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
       letter-spacing: 0.10em; color: var(--white); margin-bottom: 18px;
@@ -1021,7 +1040,7 @@
           <a href="#produtos">Produtos</a>
           <a href="#diferenciais">Diferenciais</a>
           <a href="#contato">Contato</a>
-          <a href="vitrine.html" class="btn-nav btn-nav-vitrine">Vitrine</a>
+          <a href="vitrine.html" class="btn-nav btn-nav-vitrine">Loja Online</a>
           <a href="https://wa.me/5551997434030" class="btn-nav" target="_blank" rel="noopener noreferrer">Fale conosco</a>
         </nav>
         <button class="menu-toggle" aria-label="Abrir menu" id="menuToggle" aria-expanded="false">
@@ -1039,7 +1058,7 @@
     <a href="#produtos" class="mobile-link">Produtos</a>
     <a href="#diferenciais" class="mobile-link">Diferenciais</a>
     <a href="#contato" class="mobile-link">Contato</a>
-    <a href="vitrine.html" class="btn-nav btn-nav-vitrine mobile-link">Vitrine</a>
+    <a href="vitrine.html" class="btn-nav btn-nav-vitrine mobile-link">Loja Online</a>
     <a href="https://wa.me/5551997434030" class="btn-nav mobile-link" target="_blank" rel="noopener noreferrer">Fale conosco</a>
   </div>
 
@@ -1057,6 +1076,7 @@
         </div>
         <h1>Utilitários <span>Autopeças</span></h1>
         <h2>Loja online especializada em peças para vans, SUVs, VUCs e picapes a diesel, com agilidade e confiança para você encontrar exatamente o que precisa.</h2>
+        <p class="hero-garantia">Sua compra garantida do site até você.</p>
         <div class="hero-actions">
           <a href="https://wa.me/5551997434030" class="btn-primary" aria-label="Fale conosco via WhatsApp" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1070,9 +1090,9 @@
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Nossa história
           </a>
-          <a href="vitrine.html" class="btn-outline" aria-label="Acessar a vitrine online">
+          <a href="vitrine.html" class="btn-outline" aria-label="Acessar a loja online">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            Vitrine online
+            Loja Online
           </a>
         </div>
         <div class="hero-stats">
@@ -1090,7 +1110,7 @@
           </div>
           <div class="stat-item">
             <div class="stat-num">100<span>%</span></div>
-            <div class="stat-label">Atendimento via WhatsApp</div>
+            <div class="stat-label">Atendimento humanizado via WhatsApp</div>
           </div>
         </div>
       </div>
@@ -1161,6 +1181,7 @@
         <p class="section-subtitle">
           Atuamos no mercado de autopeças, com foco em peças para vans, SUVs, VUCs e picapes a diesel. Oferecemos atendimento personalizado e orçamentos com agilidade, para que o seu veículo volte a rodar o mais rápido possível.
         </p>
+        <p class="section-subtitle">Entrega rápida e eficiente para toda região Sul do Brasil.</p>
         <div class="mercado-tags">
           <span class="mercado-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Vans</span>
           <span class="mercado-tag"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>SUVs</span>
@@ -1382,20 +1403,20 @@
     <div class="container">
       <div class="vitrine-box">
         <div class="vitrine-img">
-          <img src="assets/img/produtos/catalogo-pecas.jpg" alt="Catálogo de peças da Utilitários Autopeças na vitrine online" loading="lazy">
+          <img src="assets/img/produtos/catalogo-pecas.jpg" alt="Catálogo de peças da Utilitários Autopeças na loja online" loading="lazy">
         </div>
         <div class="vitrine-content">
           <span class="section-tag">Confira agora</span>
-          <h2 class="section-title" id="vitrine-title">Explore a nossa <span>vitrine online</span></h2>
+          <h2 class="section-title" id="vitrine-title">Explore a nossa <span>Loja Online</span></h2>
           <p class="section-subtitle">Veja de pertinho o nosso catálogo completo de peças para vans, SUVs, VUCs e picapes, com fotos e descrições, direto do seu celular ou computador.</p>
           <ul class="vitrine-list">
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Catálogo completo e sempre atualizado</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fotos e detalhes de cada peça</li>
             <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Consulte de onde você estiver</li>
           </ul>
-          <a href="vitrine.html" class="btn-primary" aria-label="Abrir a vitrine online da Utilitários Autopeças">
+          <a href="vitrine.html" class="btn-primary" aria-label="Abrir a loja online da Utilitários Autopeças">
             <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-            Visitar a vitrine
+            Visitar a Loja Online
           </a>
         </div>
       </div>
@@ -1489,6 +1510,31 @@
           </div>
         </div>
       </div>
+      <div class="depo-cta">
+        <p>Já comprou com a gente? Conte como foi a sua experiência.</p>
+        <button type="button" class="btn-primary" id="avaliarToggle" aria-expanded="false" aria-controls="avaliarForm">★ Deixar minha avaliação</button>
+        <form id="avaliarForm" class="avaliar-form" hidden novalidate>
+          <div class="form-group">
+            <label for="av-nome">Seu nome *</label>
+            <input type="text" id="av-nome" placeholder="Seu nome" required>
+          </div>
+          <div class="form-group">
+            <label>Sua nota *</label>
+            <div class="av-stars" id="avStars" role="radiogroup" aria-label="Nota de 1 a 5">
+              <button type="button" role="radio" aria-checked="false" data-v="1" aria-label="1 estrela">★</button>
+              <button type="button" role="radio" aria-checked="false" data-v="2" aria-label="2 estrelas">★</button>
+              <button type="button" role="radio" aria-checked="false" data-v="3" aria-label="3 estrelas">★</button>
+              <button type="button" role="radio" aria-checked="false" data-v="4" aria-label="4 estrelas">★</button>
+              <button type="button" role="radio" aria-checked="false" data-v="5" aria-label="5 estrelas">★</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="av-texto">Sua avaliação *</label>
+            <textarea id="av-texto" placeholder="Conte como foi sua compra e o atendimento..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Enviar avaliação pelo WhatsApp</button>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -1504,7 +1550,7 @@
           <div class="contato-info-list">
             <div class="contato-item">
               <div class="contato-icon">
-                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                <svg viewBox="0 0 24 24" style="fill:currentColor;stroke:none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
               </div>
               <div class="contato-item-text">
                 <strong>WhatsApp</strong>
@@ -1608,6 +1654,16 @@
             <img src="logo.png?v=2" alt="Utilitários Autopeças — Logo" loading="lazy">
           </div>
           <p>Utilitários Autopeças — peças para vans, SUVs, VUCs e picapes a diesel, com agilidade e confiança desde 2013.</p>
+          <div class="footer-pay">
+            <span class="footer-pay-title">Aceitamos cartões e Pix</span>
+            <div class="footer-pay-icons" role="img" aria-label="Visa, Mastercard, Elo, American Express e Pix">
+              <svg viewBox="0 0 48 30" aria-hidden="true"><rect width="48" height="30" rx="4" fill="#fff"/><text x="24" y="21" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-style="italic" font-size="14" fill="#1A1F71">VISA</text></svg>
+              <svg viewBox="0 0 48 30" aria-hidden="true"><rect width="48" height="30" rx="4" fill="#fff"/><circle cx="19" cy="15" r="8" fill="#EB001B"/><circle cx="29" cy="15" r="8" fill="#F79E1B"/><path d="M24 8.6a8 8 0 0 1 0 12.8 8 8 0 0 1 0-12.8z" fill="#FF5F00"/></svg>
+              <svg viewBox="0 0 48 30" aria-hidden="true"><rect width="48" height="30" rx="4" fill="#000"/><text x="24" y="21" text-anchor="middle" font-family="Arial,sans-serif" font-weight="900" font-size="14" fill="#fff">elo</text></svg>
+              <svg viewBox="0 0 48 30" aria-hidden="true"><rect width="48" height="30" rx="4" fill="#2E77BC"/><text x="24" y="19" text-anchor="middle" font-family="Arial,sans-serif" font-weight="800" font-size="8.5" fill="#fff">AMEX</text></svg>
+              <svg viewBox="0 0 48 30" aria-hidden="true"><rect width="48" height="30" rx="4" fill="#fff"/><path d="M10 15l4-4 4 4-4 4z" fill="#32BCAD"/><text x="21" y="20" font-family="Arial,sans-serif" font-weight="800" font-size="13" fill="#32BCAD">pix</text></svg>
+            </div>
+          </div>
           <div class="footer-social">
             <a href="https://www.instagram.com/utilitariosautopecas/" target="_blank" rel="noopener" aria-label="Instagram Utilitários Autopeças">
               <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -1626,7 +1682,7 @@
             <li><a href="#mercado">Mercado de atuação</a></li>
             <li><a href="#produtos">Produtos</a></li>
             <li><a href="#diferenciais">Diferenciais</a></li>
-            <li><a href="vitrine.html">Vitrine online</a></li>
+            <li><a href="vitrine.html">Loja Online</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
@@ -1725,6 +1781,31 @@
         toggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Avaliação → WhatsApp
+    (function () {
+      const btn = document.getElementById('avaliarToggle');
+      const form = document.getElementById('avaliarForm');
+      if (!btn || !form) return;
+      let nota = 0;
+      const stars = form.querySelectorAll('#avStars button');
+      const paint = n => stars.forEach(b => { const on = +b.dataset.v <= n; b.classList.toggle('on', on); b.setAttribute('aria-checked', String(+b.dataset.v === nota)); });
+      stars.forEach(b => b.addEventListener('click', () => { nota = +b.dataset.v; paint(nota); }));
+      btn.addEventListener('click', () => {
+        const open = form.hidden;
+        form.hidden = !open;
+        btn.setAttribute('aria-expanded', String(open));
+        if (open) document.getElementById('av-nome').focus();
+      });
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const nome = document.getElementById('av-nome').value.trim();
+        const texto = document.getElementById('av-texto').value.trim();
+        if (!nome || !nota || !texto) { alert('Por favor, preencha seu nome, a nota e a avaliação.'); return; }
+        const msg = `Olá! Gostaria de deixar minha avaliação sobre a Utilitários Autopeças.\n\n*Nome:* ${nome}\n*Nota:* ${'★'.repeat(nota)} (${nota}/5)\n*Avaliação:* ${texto}`;
+        window.open(`https://wa.me/5551997434030?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+    })();
 
     // Formulário → WhatsApp
     document.getElementById('contactForm').addEventListener('submit', function(e) {
